@@ -34,7 +34,7 @@
            <a class="buy-sorry__a" v-if="(good.disabled)">{{good.sorry}}</a>
             <a class="buy-hover__a" v-else-if="(good.selected && good.hovered == true)">{{good.desc}}</a>
             <a class="buy-hover__a" v-else-if="(good.selected)">{{good.desc}}</a>
-            <a class="buy__a" v-else>Чего сидишь? Порадуй котэ,<span class="buy-span__a">купи</span><span class="span__dot">.</span></a>
+            <a class="buy__a" v-else>Чего сидишь? Порадуй котэ,<span @click="good.selected = true" class="buy-span__a">купи</span><span class="span__dot">.</span></a>
         </div>    
       </div>
     </div>
@@ -192,6 +192,7 @@ export default {
 .buy-span__a {
   color: #1698D9;
   border-bottom: 1px dashed;
+  cursor: pointer;
 }
 .buy-hover__a {
   color: #fff;
