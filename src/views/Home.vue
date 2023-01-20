@@ -30,11 +30,11 @@
                 </div>
               </div>
             </div>
-            <a class="buy-sorry__a" v-if="(good.disabled)">{{good.sorry}}</a>
+          </div>
+           <a class="buy-sorry__a" v-if="(good.disabled)">{{good.sorry}}</a>
             <a class="buy-hover__a" v-else-if="(good.selected && good.hovered == true)">{{good.desc}}</a>
             <a class="buy-hover__a" v-else-if="(good.selected)">{{good.desc}}</a>
             <a class="buy__a" v-else>Чего сидишь? Порадуй котэ,<span class="buy-span__a">купи</span><span class="span__dot">.</span></a>
-          </div>
         </div>    
       </div>
     </div>
@@ -95,42 +95,44 @@ export default {
   background-image: url('../assets/img/pattern.png');
   width: 100%;
   background-size: cover;
-    height: 100vh;
-    background-repeat: no-repeat;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  height: 100vh;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+    
 }
 .cards__container {
   display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 24px;
-    gap: 80px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  gap: 80px;
+  flex-wrap: wrap;
 }
 .background__border{
   width: 320px;
-    height: 480px;
-    padding: 4px;
-    background: linear-gradient(135deg, transparent 33px, #1698D9 0);
-    box-sizing: border-box;
-    border-radius: 12px;
-    cursor: pointer;
+  height: 480px;
+  padding: 4px;
+  background: linear-gradient(135deg, transparent 33px, #1698D9 0);
+  box-sizing: border-box;
+  border-radius: 12px;
+  cursor: pointer;
 }
 .good__container {
   width: 100%;
-    height: 100%;
-    padding: 0;
-    background: #fff;
-    background: url('../assets/img/cat.jpg'),linear-gradient(135deg, transparent 32px, #fff 0);
-    border-radius: 8px;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    box-sizing: border-box;
-    padding: 21px 51px;
-    position: relative;
+  height: 100%;
+  padding: 0;
+  background: #fff;
+  background: url('../assets/img/cat.jpg'),linear-gradient(135deg, transparent 32px, #fff 0);
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  box-sizing: border-box;
+  padding: 21px 51px;
+  position: relative;
 }
 .flex__container {
   display: flex;
@@ -138,7 +140,7 @@ export default {
 }
 .main-title__h1 {
   margin-left: -2.5px;
-    margin-top: 5px;
+  margin-top: 5px;
 }
 .piece__a {
   margin-top: 15px;
@@ -148,44 +150,44 @@ export default {
 .header__h1 {
   color: #fff;
   font-family: "mainfont";
+  text-align: center;
 }
 .round {
   background-color: #1698D9;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    font-weight: 400;
-    font-size: 42px;
-    line-height: 22px;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    /* align-content: center; */
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 22px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
 }
 .killo {
   font-weight: 400;
-    font-size: 42px;
-    line-height: 41px;
-    color: #fff;
-    font-family: 'Trebuchet MS';
-font-style: normal;
+  font-size: 42px;
+  line-height: 41px;
+  color: #fff;
+  font-family: 'Trebuchet MS';
+  font-style: normal;
 }
 .gramm {
   font-weight: 400;
-font-size: 21px;
-line-height: 22px;
-color: #fff;
+  font-size: 21px;
+  line-height: 22px;
+  color: #fff;
 }
 .buy__a {
   color: #fff;
-    display: flex;
-    justify-content: center;
-    margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
 }
 .buy-span__a {
   color: #1698D9;
@@ -196,71 +198,69 @@ color: #fff;
 }
 .buy-sorry__a {
   color: #FFFF66;
-    display: flex;
-    justify-content: center;
-    margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
 }
 .buy-hover__a {
   color: #fff;
-    display: flex;
-    justify-content: center;
-    margin-top: 14px;
-   font-size: 13px;
-line-height: 15px;
-width: 313px;
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 15px;
+  width: 313px;
 }
 .swap-color__one {
-   width: 320px;
-    height: 480px;
-    padding: 4px;
-    background: #58a;
-    background: linear-gradient(135deg, transparent 33px, #2EA8E6 0);
-    box-sizing: border-box;
-    border-radius: 12px;
+  width: 320px;
+  height: 480px;
+  padding: 4px;
+  background: #58a;
+  background: linear-gradient(135deg, transparent 33px, #2EA8E6 0);
+  box-sizing: border-box;
+  border-radius: 12px;
 }
 .swap-color__two {
   background-color: #2EA8E6;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    font-weight: 400;
-    font-size: 42px;
-    line-height: 22px;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    /* align-content: center; */
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 22px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
 }
 .selected-one {
   width: 320px;
-    height: 480px;
-    padding: 4px;
-    background: linear-gradient(135deg, transparent 33px, #D91667 0);
-    box-sizing: border-box;
-    border-radius: 12px;
+  height: 480px;
+  padding: 4px;
+  background: linear-gradient(135deg, transparent 33px, #D91667 0);
+  box-sizing: border-box;
+  border-radius: 12px;
 }
 .selected-two {
   background-color: #D91667;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    font-weight: 400;
-    font-size: 42px;
-    line-height: 22px;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    /* align-content: center; */
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 22px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
 }
 .disabled-pos {
   filter: contrast(1) grayscale(0.9) saturate(1);
@@ -270,62 +270,64 @@ width: 313px;
 }
 .disabled-border {
   width: 320px;
-    height: 480px;
-    padding: 4px;
-    background: linear-gradient(135deg, transparent 33px, #B3B3B3 0);
-    box-sizing: border-box;
-    border-radius: 12px;
-    cursor: pointer;
+  height: 480px;
+  padding: 4px;
+  background: linear-gradient(135deg, transparent 33px, #B3B3B3 0);
+  box-sizing: border-box;
+  border-radius: 12px;
+  cursor: pointer;
 }
 .hover-round-two {
   background-color: #E52E7A;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    font-weight: 400;
-    font-size: 42px;
-    line-height: 22px;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    /* align-content: center; */
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 22px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
 }
 
 .hover-two {
   background-color:#E52E7A ;
   width: 320px;
-    height: 480px;
-    padding: 4px;
-    background: linear-gradient(135deg, transparent 33px, #E52E7A 0);
-    box-sizing: border-box;
-    border-radius: 12px;
+  height: 480px;
+  padding: 4px;
+  background: linear-gradient(135deg, transparent 33px, #E52E7A 0);
+  box-sizing: border-box;
+  border-radius: 12px;
 }
 .hover__p {
   color: #E52E7A
 }
-@media (max-width: 414px) {
-  .cards__container {
-    flex-direction: column;
-    margin-top: 40px;
-  }
+ 
+@media (min-width: 1220px) {
   .main__container {
-    height: 100%;
-  }
-  .header__h1 {
-    text-align: center;
+   height: 100vh;
   }
 }
-@media (max-width: 820px) {
-  .cards__container {
-    flex-wrap: wrap;
+@media (min-width: 820px) and (max-width:1260px) {
+ .main__container {
+    box-sizing: border-box;
+    padding: 0 60px;
+    height: 100vh;
   }
-  .main__container {
-   
+}
+@media (min-width: 380px) and (max-width:788px) {
+ .main__container {
+    box-sizing: border-box;
+    padding: 0 60px;
+    height: 100%;
+  }
+  .cards__container {
+    gap: 30px;
   }
 }
 </style>
