@@ -1,32 +1,70 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <router-view/>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@font-face {
+  font-family: "mainfont";
+  src: local("mainfont"),
+   url(./assets/fonts/mainfont.otf) format("truetype");
+}
+body {
+  margin: 0;
+}
+p {
+  font-family: 'Trebuchet MS';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+margin: 0;
+-moz-user-select: none;
+-khtml-user-select: none;
+user-select: none;   
+color: #666666;
+}
+h1 {
+  font-family: 'Trebuchet MS';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 56px;
+/* identical to box height */
+margin: 0;
+-moz-user-select: none;
+-khtml-user-select: none;
+user-select: none;   
+color: #000000;
+
+}
+h2 {
+  font-family: 'Trebuchet MS';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+/* identical to box height */
+margin: 0;
+-moz-user-select: none;
+-khtml-user-select: none;
+user-select: none;   
+color: #000000;
+} 
+a {
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+-moz-user-select: none;
+-khtml-user-select: none;
+user-select: none;   
+
+color: #666666;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
